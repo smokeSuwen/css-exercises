@@ -46,3 +46,32 @@ a {
 ul {
   list-style-type: none;
 }
+
+/* my solution */
+
+/* 
+   这种两分离的导航栏，把两边部分套个 div，用 space-between justify 即可。不用
+   auto margin 分离是因为此法不好再为两个部分中的 item 统一设置样式，还是各自套
+   一个盒子好，盒子里的样式设置可以相同，如此就仅用一个 rule 表达了。
+
+   另外，涉及赋于像素 value 的情形中，具体采用 2 的幂比较好。这个例子中，两个不同类
+   型的元素之间的空间为 16px，两个相同类型的元素的是 8px。
+*/
+
+.header {
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  gap: 16px;
+}
+
+ul {
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.notifications {
+  margin-left: auto;
+}
