@@ -27,6 +27,15 @@ img {
 
 /* my solution */
 
+/* 
+   正确思路：开局整个 ceter text align，这样后续 title 就不用动了。然后对
+   items 套个容器，再在里面套四个小容器，最后开启 flex，使用 justify center
+   即可建立起整体。后续只需要添加 margin-bottom、gap 和 max-width 了。
+
+   - 没必要为 title 使用 flex 下的居中。
+   - text align 在这种（informaiton case）情况下可作用于整体。
+*/
+
 .information {
   display: flex;
   flex-direction: column;
@@ -38,7 +47,7 @@ img {
 }
 
 .items {
-  display: flex;
+  display: flex;  
   gap: 52px;
   justify-content: center;
 }
