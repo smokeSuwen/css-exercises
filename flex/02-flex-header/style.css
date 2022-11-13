@@ -26,13 +26,8 @@ a {
 
 /* my solution */
 
-/* 不用急着将所有元素的默认 padding 和 margin 消除，消除 ul 的就可以了。
-   而且导航栏盒子应该有 padding，这比为 item 添加 margin 的实现要好一
-   些吧。
-*/
-
 .right-links {
-  /* margin-left: auto; */
+  margin-left: auto;
 }
 
 * {
@@ -48,6 +43,7 @@ a {
 
 .logo {
   margin: 10px;
+  margin-left: auto;
 }
 
 ul {
@@ -55,3 +51,10 @@ ul {
   gap: 10px;
   margin: 10px;
 }
+
+/* - 不用急着将所有元素的默认 padding 和 margin 消除，消除 ul 的就可以了。
+   - 而且导航栏盒子应该有 padding，这比为 item 添加 margin 的实现要好一
+   些吧。
+   - 三样 item 的话，sapce-between 就可以让中间的 item 居中啦。可以不用
+   auto margin 的。
+*/
